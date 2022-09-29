@@ -26,7 +26,6 @@ export class AdminService {
   }
 
   validateVeterinary(email: string): Observable<void> {
-    return this.http.patch<void>(`/admin/      .get<IVeterinary[]>('/admin/veterinaries')
-    /${email}`, {});
+    return this.http.patch<void>(`/admin/veterinaries/${email}`, {});
   }
 }
