@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="app-header__container mat-elevation-z6">
+  <span>VétoLib</span>
+  <span class="app-header__spacer"></span>
+  <button mat-button *ngIf="!auth.isLoggedIn" (click)="auth.login()">
+    Connexion
+  </button>
+  <button mat-icon-button *ngIf="auth.isLoggedIn" [matTooltip]="auth.name">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <button mat-button *ngIf="auth.isLoggedIn" (click)="auth.logout()">
+    Déconnexion
+  </button>
+</mat-toolbar>
