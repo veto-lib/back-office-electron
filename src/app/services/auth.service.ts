@@ -13,8 +13,8 @@ export class AuthService {
   async start() {
     this.oauthService.configure({
       issuer: environment.auth.issuer,
-      redirectUri: window.location.origin,
-      postLogoutRedirectUri: window.location.origin,
+      redirectUri: 'https://login.microsoftonline.com/common/oauth2/nativeclient',
+      postLogoutRedirectUri: 'https://login.microsoftonline.com/common/oauth2/nativeclient',
       clientId: environment.auth.clientId,
       scope: environment.auth.scope,
       skipIssuerCheck: true,
